@@ -18,27 +18,27 @@ void fillSnake(std::array <std::array<int, LENGTH>, HEIGHT>& arr)
 
 	while (height >= up && length >= left)
 	{
-	++up;
+		++up;
 
-	for (rowPoint; rowPoint < length; ++rowPoint)
-		arr[colPoint][rowPoint] = num++;
-	--rowPoint;
+		for (rowPoint; rowPoint < length; ++rowPoint)
+			arr[colPoint][rowPoint] = num++;
+		--rowPoint;
 
-	--length;
+		--length;
 
-	for (++colPoint; colPoint < height; ++colPoint)
-		arr[colPoint][rowPoint] = num++;
-	--colPoint;
+		for (++colPoint; colPoint < height; ++colPoint)
+			arr[colPoint][rowPoint] = num++;
+		--colPoint;
 
-	--height;
+		--height;
 
-	for (--rowPoint; rowPoint > left; --rowPoint)
-		arr[colPoint][rowPoint] = num++;
+		for (--rowPoint; rowPoint > left; --rowPoint)
+			arr[colPoint][rowPoint] = num++;
 
-	++left;
+		++left;
 
-	for (colPoint; colPoint > up; --colPoint)
-		arr[colPoint][rowPoint] = num++;
+		for (colPoint; colPoint > up; --colPoint)
+			arr[colPoint][rowPoint] = num++;
 
 	}
 }
